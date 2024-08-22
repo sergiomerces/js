@@ -293,3 +293,26 @@ O método *.toLocaleString* ajuda nessa tarefa é um recurso que insere o símbo
     document.write(`<br>${salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`);
     document.write(`<br>${salario.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})}`);
     document.write(`<br>${salario.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'})}`);
+
+---
+
+## Operadores aritméticos
+( + ) soma
+
+( - ) subtração
+
+( * ) multiplicação
+
+( / ) divisão
+
+( % ) módulo
+
+( ** ) potenciação
+
+### Incremento/Decremento
+
+    var x = 5;
+    x = x + 1 <=> x += 1 <=> x++;
+    x = x - 1 <=> x -= 1 <=> x--;
+
+
