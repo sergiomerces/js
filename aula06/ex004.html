@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando variáveis</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Capturando e manipulando entrada do usuário</h1>
+    <script>   
+        let nome = prompt('Qual o seu nome?');
+
+        document.write(`<p><strong>${nome}<strong>, seu nome tem ${nome.length} caracteres!<p>`);
+        document.write(`<p><strong>${nome}<strong>, seu nome em maiúsculo ${nome.toUpperCase()}.<p>`);
+        document.write(`<p><strong>${nome}<strong>, seu nome em minúsculo ${nome.toLowerCase()}.<p>`);
+
+        let precoDaGasolina = 5.549;
+        let temperatura = 27.315
+
+        document.write(`O preço formatado da Gasolina ${precoDaGasolina.toFixed(2)}`);
+        document.write(`<br>A temperatura formatada ${temperatura.toFixed(1)} ºC`);
+        
+        document.write(`<br>O preço formatado pt-br da Gasolina ${precoDaGasolina.toFixed(2).replace('.', ',')}`);
+        document.write(`<br>A temperatura formatada pt-br ${temperatura.toFixed(1).replace('.', ',')} ºC`);
+
+        let salario = 2587.85;
+        document.write(`<br>${salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`);
+        document.write(`<br>${salario.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})}`);
+        document.write(`<br>${salario.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'})}`);
+    </script>
+</body>
+</html>

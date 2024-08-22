@@ -110,7 +110,7 @@ Os comentários podem ser feitos em trechos do código para facilitar a manuten�
 O trecho comentado não é executado pelo interpretador JavaScript.
 
 ---
-## Variáveis
+## 🗃️ Variáveis
 São espaços delimitados na memória RAM do computador para receber dados.
 
 Para declarar uma variável usamos a seguinte sintaxe:
@@ -249,17 +249,47 @@ Para saber quantos caracteres tem uma string usamos o método *.length*:
     nome.legth;
 
 ### Formatando todos caracteres maiúsculos
-Para tornar toda expressão em maiúscula
+Para tornar toda expressão em maiúscula usamos o método *.toUpperCase()*
 
     let carro = 'ford';
 
-    carro.toUppercase();
+    carro.toUpperCase();
 
 ### Formatando todos caracteres minúsculas
-Para tornar toda expressão em minúscula
+Para tornar toda expressão em minúscula usamos o método *toLowerCase()*
 
     let carro = 'ford';
 
-    carro.toUppercase();
+    carro.toLowerCase();
 
 ---
+
+## Formantando números
+Para definir o número de casas decimais usamos o método *.toFixed()*
+
+    let precoDaGasolina = 5.549;
+    let temperatura = 27.315
+    precoDaGasolina.toFixed(2);
+    temperatura.toFixed(1);
+
+Na programação usamos a notação americana, com o ponto (.) para separar a parte inteira da decimal de um número de ponto flutuante; para que tenhamos uma saída usando vírgula, como na notação brasileira, podemos combinar o método *toFixed()*
+ com *.replace()*
+
+    let peso = 75.315
+    peso.toFixed(1).replace('.', ',');
+
+Exemplificando melhor:
+
+        document.write(`O preço formatado da Gasolina ${precoDaGasolina.toFixed(2)}`);
+        document.write(`<br>A temperatura formatada ${temperatura.toFixed(1)} ºC`);
+        
+        document.write(`<br>O preço formatado pt-br da Gasolina ${precoDaGasolina.toFixed(2).replace('.', ',')}`);
+        document.write(`<br>A temperatura formatada pt-br ${temperatura.toFixed(1).replace('.', ',')} ºC`);
+
+### Formatando valores monetários internacionais
+O método *.toLocaleString* ajuda nessa tarefa é um recurso que insere o símbolo da moeda à esquerda do número e sem a necessidade de usar o *.replace()* já troca o ponto por vírgula para a sepaeação dos decimais.
+
+    let salario = 2587.85;
+    document.write(`<br>${salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`);
+    document.write(`<br>${salario.toLocaleString('pt-br', {style: 'currency', currency: 'USD'})}`);
+    document.write(`<br>${salario.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'})}`);
