@@ -297,6 +297,8 @@ O método *.toLocaleString* ajuda nessa tarefa é um recurso que insere o símbo
 ---
 
 ## Operadores aritméticos
+São operadore usados para fazer cálculos matemáticos.
+
 ( + ) soma
 
 ( - ) subtração
@@ -309,10 +311,81 @@ O método *.toLocaleString* ajuda nessa tarefa é um recurso que insere o símbo
 
 ( ** ) potenciação
 
+### Precedência de operadores
+O parêntese tem prioridade sobre a ordem de precedência; depois a potenciação; seguida de multiplicação, divisão ou módulo e por último soma ou subtração.
+
+1. ( )
+2. **
+2. * ou / ou %
+3. + ou -
+
+---
+
+## Operadores de atribuição
+
+    let a = 5 + 3;
+    let b = a % 5;
+    let c = 5 * b ** 2;
+    let d = 6 * 2 / d;
+    let f = b % e + 4 / e;
+
+### Simplificando atribuições
+
+    let n = 3
+
+    n = n + 4   n += 4
+    n = n - 5   n -= 5
+    n = n * 4   n *= 4
+    n = n / 2   n /= 2
+    n = n ** 2  n **= 2
+    n = n % 5   n %= 5
+
 ### Incremento/Decremento
 
     var x = 5;
     x = x + 1 <=> x += 1 <=> x++;
     x = x - 1 <=> x -= 1 <=> x--;
 
+----
+
+## Operadores relacionais
+São operadores usados para fazer comprações que têm como retorno sempre uma valor *booleano* (verdadeiro ou falso).
+
+    >   maior
+
+    <   menor
+    >=  maior ou igual
+
+    <=  menor ou igual
+
+    ==  igual (testa o valor e não o tipo)
+
+    === idêntico (testa valor e tipo)
+
+    !=  diferente (testa apenas valor)
+
+    !== desigual restrito (testa valor e tipo)
+
+Operadores relacionais não possuem ordem de precedênciam são resolvidos da esquerda para a direita na ordem que forem aparecendo.
+
+----
+
+## Operadores lógicos
+São usados para operações de lógica *booleana*
+
+!   not     negação
+&&  and     conjunção
+ǁ   or      disjunção
+
+A ordem de precedência de operadores lógicos é primeiro *not*, seguida de *and* e *or*.
+
+---
+
+## Operador ternário
+
+O perador ternário é um operador composto por três partes, uma expressão lógica, uma bloco para verdadeiro e outro para falso.
+
+teste **?** *true* **:** *false*
+
+    media >= 7.0 ? 'Aprovado' : 'Reprovado';
 
