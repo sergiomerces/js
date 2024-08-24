@@ -426,12 +426,57 @@ A partir da árvore DOM é possível acessar qualquer elemento da página.
     </body>
     </html>
 
-### Seletores
+### Acessando e manipulando elementos DOM
 
 Para acessar elementos HTMl numa página usamos seletores:
 
-1. Por marca    
-getElementsByTagName()
+    
 
-2. Por ID   
-getElementById()
+#### Por marca    
+*getElementsByTagName()*
+
+Permite selecionar mais de um elemento HTML do mesmo tipo através da **tag HTML**. Para capturar um elemento específico entre outros temos que usar o índice do elemento como se fosse um *array*.
+
+    <script>
+        let paragrafoUm = window.document.getElementsByTagName('p')[0];
+        window.document.write('<br><br>Está escrito assim: ' + paragrafoUm.innerHTML);
+        paragrafoUm.style.color = 'yellow';
+    </script>
+    
+#### Por ID   
+*getElementById()*
+
+Permite selecionar um elemento específico através da propriedade **ID** definido no código HTML.
+
+    let div = window.document.getElementById('mensagem');
+    div.style.background = 'green';
+    div.innerText = 'Estou aguardando...'
+
+    /*
+        outra forma de injetar texto no elemento, quando for fazer apenas uma vez
+
+        window.document.getElementById('mensagem').innerText = 'Estou aguardando...'
+    */
+
+#### Por Nome   
+*getElementsByIdName()*
+
+Permite selecionar um elemento específico através da propriedade **name** definida no código HTML.
+
+    let div2 = document.getElementsByName('texto')[1];
+    div2.innerHTML = 'Texto inserido com name';
+
+#### Por Classe   
+*getElementsByClassName()*
+
+Permite selecionar um elemento específico através da propriedade **class** definida no código HTML.
+
+#### Por Seletor   
+*querySelector()*
+
+*querySelectorAll()*
+
+Permite selecionar um elemento específico através dos seletores definida no código HTML. Essa é uma forma mais nova recomendada.
+
+    let titulo = document.querySelector('h1#titulo');
+    titulo.style.color = 'orange';

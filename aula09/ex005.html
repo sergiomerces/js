@@ -13,19 +13,38 @@
     </style>
 </head>
 <body>
-    <h1>Iniciando os estudos DOM</h1>
-    <p>Aqui vai o resultado.</p>
-    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
-    <div>Clique em mim</div>
+    <h1 id="titulo">Iniciando os estudos DOM</h1>
+    <p class="paragrafos">Aqui vai o resultado.</p>
+    <p class="paragrafos">Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="mensagem" name="texto">Clique em mim</div>
+    <div name="texto"><!--segunda div para inserção de texto--></div>
     <script>
         window.document.write('Ola mundo!');
         window.document.write('<br>' + window.document.charset);
         window.document.write('<br>' + window.navigator.appName);
         window.document.write('<br>' + window.document.URL);
         
+        //seleção por tag
         let paragrafoUm = window.document.getElementsByTagName('p')[0];
         window.document.write('<br><br>Está escrito assim: ' + paragrafoUm.innerHTML);
         paragrafoUm.style.color = 'yellow';
+
+        //seleção por id
+        let div = window.document.getElementById('mensagem');
+        div.style.background = 'green';
+        div.innerText = 'Estou aguardando...'
+        /*
+            outra forma de injetar texto no elemento, quando for fazer apenas uma vez
+
+            window.document.getElementById('mensagem').innerText = 'Estou aguardando...'
+        */
+
+        let div2 = document.getElementsByName('texto')[1];
+        div2.innerHTML = 'Texto inserido com name';
+
+        let titulo = document.querySelector('h1#titulo');
+        titulo.style.color = 'orange';
+
     </script>
 </body>
 </html>
