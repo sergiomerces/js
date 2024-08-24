@@ -480,3 +480,104 @@ Permite selecionar um elemento específico através dos seletores definida no c�
 
     let titulo = document.querySelector('h1#titulo');
     titulo.style.color = 'orange';
+
+---
+
+## Eventos DOM
+Evento é todo tipo de interação que pode acontecer com um elemento da página, os mais comuns são eventos de mouse.
+
+*mouseenter*    quando o mouse entra na área do elemento
+
+*mousemove*     quando o mouse se move sobre o elemento
+
+*mousedown*     quando o botão do mouse é pressionado
+
+*mouseup*       quando o botão do mouse é solto
+
+*click*    quando o botão do mouse é presionado e solto rapidamente
+
+*mouseout*      quando o mouse sai da área do elemento
+
+## Disparando um evento
+Para executar uma açõa por meio de evento precisamos do auxílio de uma função.
+
+Função é um bloco de código que disparado somente quando o evento ocorrer, executando as ações pré-definidas no bloco.
+
+    function nomeAcao(parametro) {
+        bloco;
+    }
+
+Como boa prática o nome da função deve ser o nome da ação executada.
+
+Evento usando disparador no HTML:
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eventos DOM</title>
+        <style>
+            div#area {
+                background-color: #3a8d3a;
+                width: 200px;
+                height: 200px;
+                font: normal 20pt Arial;
+                color: #fff;
+                text-align: center;
+                line-height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="area" onClick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+            Interaja...
+        </div>
+        <script>
+            const area = document.getElementById('area');
+
+            function clicar() {
+                area.innerText = 'Clicou!'
+                area.style.background = 'red';
+            }
+
+            function entrar() {
+                area.innerText = 'Entrou!';
+            }
+
+            function sair() {
+                area.innerText = 'Saiu!';
+                area.style.background = '#3a8d3a'
+            }
+        </script>
+    </body>
+    </html>
+
+### Usando *listeners* para disparar eventos
+Não usamos os eventos na no código HTML, usamos a função *addEventListener('evento', nome)* como no trecho reescrito abaixo:
+
+    <body>
+        <div id="area">
+            Interaja...
+        </div>
+        <script>
+            const area = document.getElementById('area');
+            area.addEventListener('click', clicar);
+            area.addEventListener('enter', entrar);
+            area.addEventListener('out', sair);
+
+            function clicar() {
+                area.innerText = 'Clicou!'
+                area.style.background = 'red';
+            }
+
+            function entrar() {
+                area.innerText = 'Entrou!';
+            }
+
+            function sair() {
+                area.innerText = 'Saiu!';
+                area.style.background = '#3a8d3a'
+            }
+        </script>
+    </body>
