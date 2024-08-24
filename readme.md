@@ -389,3 +389,49 @@ teste **?** *true* **:** *false*
 
     media >= 7.0 ? 'Aprovado' : 'Reprovado';
 
+---
+
+## DOM  - Document Object Model
+A árvore DOM é a forma como os elementos de uma página se organizam no JavaScript a partir de nós até uma raiz. Tudo em JavaScript está dentro de uma raiz DOM, que é a janela do navegador.
+
+![Árvore DOM](https://miro.medium.com/v2/resize:fit:1400/1*mMmuOhNytgqP7lrU9HPTpw.jpeg)
+
+A partir da árvore DOM é possível acessar qualquer elemento da página.
+
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primeiros passos com DOM</title>
+        <style>
+            body {
+                background: #5868f7;
+                color: #fff;
+                font: normal 16pt Arial;;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Iniciando os estudos DOM</h1>
+        <p>Aqui vai o resultado.</p>
+        <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+        <div>Clique em mim</div>
+        <script>
+            window.document.write('Ola mundo!');
+            window.document.write('<br>' + window.document.charset);
+            window.document.write('<br>' + window.navigator.appName);
+            window.document.write('<br>' + window.document.URL);        
+        </script>
+    </body>
+    </html>
+
+### Seletores
+
+Para acessar elementos HTMl numa página usamos seletores:
+
+1. Por marca    
+getElementsByTagName()
+
+2. Por ID   
+getElementById()
