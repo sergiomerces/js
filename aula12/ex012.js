@@ -1,4 +1,7 @@
-let hora = 18;
+let agora = new Date();
+let hora = agora.getHours();
+
+console.log(agora.toLocaleString());
 
 if(hora >= 0 && hora < 5){
     console.log('Boa madrugada!');

@@ -708,3 +708,41 @@ Definindo a nacionalidade no navegador:
 **Nota**
 
 Para capturar o valor dentro de um elemento *input* usamos a propriedade *.value*
+
+---
+
+## Capturando a hora do sistema
+Vamos criar e estanciar um objeto que recebe a função *new Date()*, que armazena a hora e data completa do sistema.
+
+    let agora = new Date();
+
+Para manipular melhor podemos criar uma variável para cada dado que vamos trabalhar, dia, mês, ano, hora, minuto e segundo, para cada um temos uma função específica.
+
+    getDate()     retorna o dia do mês de 1 a 31
+    getDay()      retorna o dia da semana de 0 a 6
+    getFullYear() retorna o ano com quatro dígitos a partir de 1900
+    getHours()    retorna a hora do dia de 0 a 23
+    getMinutes()  retorna os minutos de 0 a 59
+    getMonth()    retorna o mês do ano de 0 a 11
+    getSeconds()  retorna os segundos de 0 a 59
+    getYear()     retorna de 0 a 99 para anos de 1900 a 1999 e com quatro dígitos para os anos adiante
+    toGMTString() retorna em formato string data e hora GMT
+    toLocaleString() a hora e data local em formato string
+    toString()      data e hora local em formato string
+
+Um exemplo de captura de hora do sistema no ambiente Nodejs:
+
+    let agora = new Date();
+    let hora = agora.getHours();
+
+    console.log(agora.toLocaleString());
+
+    if(hora >= 0 && hora < 5){
+        console.log('Boa madrugada!');
+    } else if(hora > 5 && hora < 12){
+        console.log('Bom dia!');
+    } else if (hora > 12 && hora < 18){
+        console.log('Boa tarde!');
+    } else {
+        console.log('Boa noite!');
+    }
