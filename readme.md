@@ -581,3 +581,33 @@ Não usamos os eventos na no código HTML, usamos a função *addEventListener('
             }
         </script>
     </body>
+
+---
+
+## Estrutura condicional
+
+### if... else
+É a estrutura de condição mais simples e usual ela a partir de uma condição pode executar um bloco, caso seja verdadeiro, ou outro, caso seja falso; permitindo assim desvios no fluxo do código.
+
+    if(condicao){
+        bloco se a condição for verdadeira
+    } else {
+        bloco se a condição for falsa
+    }
+
+## Usando o *Nodejs*
+O Nodejs é uma biblioteca JavaScript que roda no ambiente do terminal, ela também pode ser executada no lado do servidor.
+
+Vamos dar um exemplo de um arquivo JavaScrit puro (.js) ra rodar no terminal testando uma estrutura condicional:
+
+    let velocidade = 60.5;
+
+    console.log(`A velocidade do seu carro é ${velocidade} km/h`);
+
+    if(velocidade > 60){
+        console.log('Você ultrapassou a velocidade permitida!');
+    } else {
+        console.log('Dirija sempre usando cinto de segurança!');
+    }
+
+    

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+        }
+
+        input {
+            font: normal 16pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descobrindo a nacionalidade</h1>
+    <div>
+        <p>Qual país você nasceu? 
+        <input type="text" name="txtpais" id="txtpais">
+        <input type="button" value="Responder" onclick="responder()">
+        </p>
+    </div>
+    <div id="resposta"></div>
+    <script>
+        function responder(){
+            const pais = document.querySelector('input#txtpais').value;
+            const resposta = document.querySelector('div#resposta');
+
+//debbugar e encontrar erro 
+
+            pais = pais.toLowerCase();
+
+            if(pais == 'Brasil')
+            resposta.innerHTML = 'Você é brasileiro!';
+        } else {
+            resposta.innerHTML = 'Você é estrangeiro!';
+        }
+    </script>
+</body>
+</html>
+
