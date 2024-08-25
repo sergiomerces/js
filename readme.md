@@ -610,4 +610,101 @@ Vamos dar um exemplo de um arquivo JavaScrit puro (.js) ra rodar no terminal tes
         console.log('Dirija sempre usando cinto de segurança!');
     }
 
-    
+Reescrevendo o mesmo código usando o HTML e JavaScript:
+
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DETRAN</title>
+        <style>
+            body {
+                font: normal 16pt Arial;
+            }
+
+            input {
+                font: normal 16pt Arial;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sistema de Multas</h1>
+        <div>
+            Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+            <input type="button" value="Verificar" onclick="calcular()">
+        </div>
+        <div id="resultado"></div>
+        <script>
+            function calcular(){
+                const velocidade = Number(document.querySelector('input#txtvel').value);
+                const resultado = document.querySelector('div#resultado');
+
+                resultado.innerHTML = `<p>A sua velocidade é de <strong>${velocidade} km/h</strong>.</p>`
+
+                if(velocidade > 60){
+                    resultado.innerHTML += '<p>Você foi <strong>multado</strong> por excesso de velocidade!</p>'
+                }
+
+                resultado.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            }
+
+        </script>
+    </body>
+    </html>
+
+Definindo nacionalidade no ambiente Node:
+
+    let pais = 'EUA';
+
+    if(pais === 'Brasil'){
+        console.log('Você é brasileiro!');
+    } else {
+        console.log('Você é estrangeiro!');
+    }
+
+Definindo a nacionalidade no navegador:
+
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nacionalidade</title>
+        <style>
+            body {
+                font: normal 16pt Arial;
+            }
+
+            input {
+                font: normal 16pt Arial;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Descobrindo a nacionalidade</h1>
+        <div>
+            <p>Qual país você nasceu? 
+            <input type="text" name="txtpais" id="txtpais">
+            <input type="button" value="Responder" onclick="responder()">
+            </p>
+        </div>
+        <div id="resposta"></div>
+        <script>
+            function responder(){
+                let pais = document.querySelector('input#txtpais');
+                let resposta = document.querySelector('div#resposta');
+
+                if(pais.value === 'Brasil'){
+                    resposta.innerHTML = 'Você é brasileiro!';
+                } else {
+                    resposta.innerHTML = 'Você é estrangeiro!';
+                }
+            }
+        </script>
+    </body>
+    </html>
+
+**Nota**
+
+Para capturar o valor dentro de um elemento *input* usamos a propriedade *.value*
