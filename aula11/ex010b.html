@@ -25,17 +25,14 @@
     <div id="resposta"></div>
     <script>
         function responder(){
-            const pais = document.querySelector('input#txtpais').value;
-            const resposta = document.querySelector('div#resposta');
+            let pais = document.querySelector('input#txtpais');
+            let resposta = document.querySelector('div#resposta');
 
-//debbugar e encontrar erro 
-
-            pais = pais.toLowerCase();
-
-            if(pais == 'Brasil')
-            resposta.innerHTML = 'Você é brasileiro!';
-        } else {
-            resposta.innerHTML = 'Você é estrangeiro!';
+            if(pais.value === 'Brasil'){
+                resposta.innerHTML = 'Você é brasileiro!';
+            } else {
+                resposta.innerHTML = 'Você é estrangeiro!';
+            }
         }
     </script>
 </body>
