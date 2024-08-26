@@ -746,3 +746,28 @@ Um exemplo de captura de hora do sistema no ambiente Nodejs:
     } else {
         console.log('Boa noite!');
     }
+
+---
+### switch
+A estrutura de seleção múltipla switch vai executar um bloco de comando de acordo com a condição da expressão determinada ou pode executar um bloco (padrão), caso nenhuma das condições satisfaça a expressão.
+O switch só funciona com números inteiros e strings, ele é recomendado para variáveis sem intervalos, para dados com intervalos o if é mais adequado.
+
+    switch(expressao){
+        case valor1:
+            bloco;
+            break;
+
+        case valor2:
+            bloco;
+            break;
+
+        case valor3:
+            bloco;
+            break;
+
+        default:
+            bloco;
+            break;
+    }
+
+É fundamental o uso do comando *break* ao fim de cada caso paa forçar o programa seguir o fluxo uma vez que a condição seja atendida.
