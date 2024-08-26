@@ -771,3 +771,98 @@ O switch só funciona com números inteiros e strings, ele é recomendado para v
     }
 
 É fundamental o uso do comando *break* ao fim de cada caso paa forçar o programa seguir o fluxo uma vez que a condição seja atendida.
+
+Exemplo de código usando o switch para definir automaticamente o dia da semana a aprtir da data do sistema:
+
+    let agora = new Date();
+
+    switch(agora.getDay()){
+        case 0:
+            console.log('Domingo');
+            break;
+
+        case 1:
+            console.log('Segunda');
+            break;
+
+        case 2:
+            console.log('Terça');
+            break;
+
+        case 3:
+            console.log('Quarta');
+            break;
+
+        case 4:
+            console.log('Quinta');
+            break;
+
+        case 5:
+            console.log('Sexta');
+            break;
+
+        case 6:
+            console.log('Sábado');
+            break;
+    }
+
+---
+## Template de Exercícios
+
+Arquivo HTML
+
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template de Exercício</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Título</h1>
+        </header>
+        <section>
+            <div>Testando</div>
+            <div>Ola</div>
+        </section>
+        <footer>
+            <p>&COPY; SCMTech, 2024</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+Arquivo CSS
+
+    @charset "UTF-8";
+
+    body {
+        background-color: #468eec;
+        font: normal 16pt Arial;
+    }
+
+    header {
+        color: #fff;
+        text-align: center;
+    }
+
+    section {
+        background-color: #fff;
+        width: 500px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 1px #00000071;
+        margin: auto;
+    }
+
+    footer {
+        color: #fff;
+        font-style: italic;
+        text-align: center;
+    }
+
+Arquivo JS
+
+    alert('Ola!');
