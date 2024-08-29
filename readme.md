@@ -880,3 +880,56 @@ Arquivo JavaScript
 
     let foto = window.document.getElementById('foto');
     foto.innerHTML = "<img src='manha.png'>";
+
+---
+## Capturando opção de botão de rádio no formulario
+
+HTML
+
+    <div>
+            <p>
+                Ano de nascimento:
+                <input type="number" name="txtano" id="txtano" min="1900" max="2024">
+            </p>
+            <p>
+                Sexo:
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="radsexo" id="masculino" checked>
+                <label for="femenino">Femenino</label>
+                <input type="radio" name="radsexo" id="femenino">
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+    </div>
+
+JavaScript
+
+    let sexo = document.getElementsByName('radsexo');
+    var genero = "";
+
+    if(sexo[0].checked) {
+        genero = 'homem';
+    } else {
+        genero = 'mulher';
+    }
+
+---
+## Criando um elemento img com JavaScript
+
+A imagem deve estar na mesma pasta que os arquivos HTML e JavaScript, resposta é o id da div
+
+    let img = document.createElement('img');
+    img.setAttribute('id', 'foto');
+
+    if(idade < 12) {
+            img.setAttribute('src', 'menino.png');
+        } else if(idade < 18) {
+            img.setAttribute('src', 'rapaz.png');
+        } else if(idade < 60) {
+            img.setAttribute('src', 'homem.png');
+        } else {
+            img.setAttribute('src', 'idoso.png');
+        }
+
+    resposta.appendChild(img);
