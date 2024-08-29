@@ -866,3 +866,17 @@ Arquivo CSS
 Arquivo JS
 
     alert('Ola!');
+
+---
+## Inserir imagem na página HTML usando JavaScript
+
+Arquivo HTML
+
+    <div id="foto">
+            <img src="manha.png" alt="imagem do dia">
+    </div>
+
+Arquivo JavaScript
+
+    let foto = window.document.getElementById('foto');
+    foto.innerHTML = "<img src='manha.png'>";
