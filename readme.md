@@ -933,3 +933,45 @@ A imagem deve estar na mesma pasta que os arquivos HTML e JavaScript, resposta �
         }
 
     resposta.appendChild(img);
+
+---
+## Estrutura de repetição
+
+Também conhecidas como laços de repetição, permitem que uma instrução ou um bloco seja repetida várias vezes de acordo com a necessidade, podem ser de três tipos:
+
+1. while
+2. do... while
+3. for
+
+### while
+A partir de uma condição faz o tese lógico e mantém o laço de repetição enquanto a condição é verdadeira.
+
+    let contador = 0;
+
+    while(contador < 6) {
+        console.log('Olá tudo bem?');
+        contador++;
+    }
+
+### do... while
+Análogo ao *while*, porém ao invés de testar a condiçãono início do bloco ele testa ao final, garantindo que o bloco de código seja executado ao menos uma vez.
+
+    let contador = 0;
+    
+    do {
+        console.log('Olá tudo bem?');
+        contador++;
+    } while(contador < 0)
+
+Tanto o *while* como o *do... while* são fortemente recomendados quando não sabemos qual é o número de interações que serão feitas.
+
+### for
+É um laço de repetição que possui uma variável de controle própria, a condição e um incremento em seu próprio corpo. O *for* é recomendado para situações onde o numero de interações seja conhecida.
+
+    for (let index = 0; index < 10; index++) {
+        console.log(`Passo ${index}`);
+    }
+
+---
+
+## Modo de Depuração
