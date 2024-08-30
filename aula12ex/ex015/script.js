@@ -13,6 +13,8 @@ function verificar() {
     } else if(anoNascimento > anoSistema) {
         alert(`Verifique o ano informado! Ninguém nasceu em ${anoNascimento} ainda!`);  
         return;
+    } else {
+        alert('Esta pessoa provavelmente não está mais viva!');
     }
 
     let genero = "";
