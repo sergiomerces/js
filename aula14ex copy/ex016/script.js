@@ -4,10 +4,6 @@ function contar() {
     let passo = Number(document.querySelector('input#txtpasso').value);
     let resposta = document.querySelector('div#resposta');
 
-    while(inicio == '' || fim == '' || passo == '') {
-        alert('Nenhum campo pode ficar vazio, informe osados numéricos necessários!');
-    }
-
     resposta.innerHTML = ' Contando:<br>';
 
     while(inicio <= fim) {
