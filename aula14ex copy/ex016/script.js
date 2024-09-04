@@ -7,9 +7,11 @@ function contar() {
     resposta.innerHTML = ' Contando:<br>';
 
     while(inicio <= fim) {
-        resposta.innerHTML += `${inicio} 👉🏾`;
+        resposta.innerHTML += `${inicio} \u{1F449}`;
         inicio += passo;
     }
 
-    resposta.innerHTML += `🏁`;
+    resposta.innerHTML += `\u{1F3C1}`;
 }
+
+
