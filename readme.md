@@ -978,7 +978,7 @@ Tanto o *while* como o *do... while* são fortemente recomendados quando não sa
 
 Para inserir emojis como *string* no JavaScript recomenda-se que use o *codepoint hexadecimal* da ficha de Informações Técnicas , universais, do [www.emojipedia.org](https://www.emojipedia.org), como exemplo abaixo a [bandeira de Grid](https://emojipedia.org/chequered-flag#technical)🏁.
 
-O *codepoibt* **U+F3C1** deve ser escrito entre aspas (inerpolação), iniciando com barra invertida, com o caracter *u* em caixa e o restante entre chaves.
+O *codepoibt* **U+F3C1** deve ser escrito entre aspas (interpolação), iniciando com barra invertida, com o caracter *u* em caixa e o restante entre chaves.
 
     resposta.innerHTML += `\u{1F3C1}`;
 
