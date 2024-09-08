@@ -997,3 +997,42 @@ Com o código Javascript
     document.getElementById('btnjogar').disabled = true;
 
 ---
+## Variáveis compostas
+
+**Variáveis simples**
+Só conseguem armazenar um valor por vez
+
+**Variáveis compostas**
+Podem armazenar vários valores numa mesma estrutura ao mesmo tempo
+
+### Array
+
+    let numero = [5, 8, 4];
+
+### Métodos de array
+
+**adicionar elemento ao fim da lista**
+
+    numero.push(7);
+
+**verificar o tamnaho da lista**
+
+    numero.length;
+
+**ordenar a lista**
+
+    numero.sort();
+
+### Percorrendo um array
+
+    let numero = [5, 8, 4, 7];
+
+    for(let i = 0; i <= numero.length; i++>){
+        consoele.log(numero[i]);
+    }
+
+Usando *for...in*
+
+    for(let elemento in array){
+        console.log(array[elemento]);
+    }
