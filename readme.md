@@ -984,3 +984,16 @@ O *codepoibt* **U+F3C1** deve ser escrito entre aspas (interpolação), iniciand
 
 ---
 
+## Ativando e desativando um botão de comando
+Para desativar um botão basta usarmos a propriedade *disable* e atribuir o valor *true*.
+
+Com o código HTML
+
+    <button type = "buton" id="btnjogar" onClick = "jogar()" disabled = "true">
+    </button>
+
+Com o código Javascript
+
+    document.getElementById('btnjogar').disabled = true;
+
+---
