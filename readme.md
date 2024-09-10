@@ -1047,3 +1047,10 @@ Para saber se um elemento faz parte do array e qual sua posição usamos o méto
 
     let canal = [5, 14, 15, 26, 30, 55];
     let index = canal.indexOf(26);
+
+----
+## Funções
+
+* São ações executadas assim que são chamadas ou em decorrência de algum evento.
+
+* Uma função pode receber parâmtros e retornar um resultado.
