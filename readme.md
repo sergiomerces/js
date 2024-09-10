@@ -1015,6 +1015,10 @@ Podem armazenar vários valores numa mesma estrutura ao mesmo tempo
 
     numero.push(7);
 
+**adicionar um elemento em uma posição específica**
+
+    numero[3] = 7;
+
 **verificar o tamnaho da lista**
 
     numero.length;
@@ -1036,3 +1040,10 @@ Usando *for...in*
     for(let elemento in array){
         console.log(array[elemento]);
     }
+
+### Localizando um elemento na lista
+
+Para saber se um elemento faz parte do array e qual sua posição usamos o método *.indexOf()*, se o elemento estiver na lista ele retorna o índice do elemento, caso não exista o retorno será -1.
+
+    let canal = [5, 14, 15, 26, 30, 55];
+    let index = canal.indexOf(26);
